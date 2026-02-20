@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONE PIECE COMMUNITY</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { gold: '#fbbf24' } } } }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; transition: background-color 0.3s, color 0.3s; }
+        .font-anime { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.05em; }
+        .gradient-text {
+            background: linear-gradient(to right, #ef4444, #fbbf24);
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .card-glow { transition: all 0.3s ease; }
+        .dark .card-glow:hover { box-shadow: 0 0 30px rgba(251, 191, 36, 0.2); transform: translateY(-5px); border-color: #fbbf24; }
+        .card-glow:hover { box-shadow: 0 0 30px rgba(251, 191, 36, 0.4); transform: translateY(-5px); border-color: #fbbf24; }
+        ::-webkit-scrollbar { width: 8px; }
+        .dark ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-track { background: #f3f4f6; }
+        ::-webkit-scrollbar-thumb { background: #fbbf24; border-radius: 4px; }
+        @keyframes haki-pulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(251, 191, 36, 0.4); }
+            50% { box-shadow: 0 0 50px rgba(251, 191, 36, 0.9), 0 0 20px rgba(239, 68, 68, 0.5); }
+        }
+        .btn-haki { animation: haki-pulse 2s infinite; transition: all 0.3s ease; }
+        .btn-haki:hover { animation: none; box-shadow: 0 0 60px rgba(251, 191, 36, 1), 0 0 30px rgba(239, 68, 68, 0.8); transform: scale(1.05); background-color: #fde047; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-[#050505] dark:text-gray-200 antialiased selection:bg-yellow-500 selection:text-black overflow-x-hidden">
+
+    <nav class="border-b border-gray-200 dark:border-gray-900 bg-white/90 dark:bg-black/90 backdrop-blur-md sticky top-0 z-50 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="OPC-avatar.png" alt="OPC Logo" class="h-12 w-12 rounded-full border-2 border-yellow-500 shadow-[0_0_10px_rgba(251,191,36,0.5)]">
+                <h1 class="text-3xl font-anime uppercase tracking-widest text-gray-900 dark:text-white mt-1">
+                    ONE PIECE <span class="text-gold">COMMUNITY</span>
+                </h1>
+            </div>
+            
+            <div class="hidden md:flex gap-8 font-bold text-sm tracking-widest uppercase">
+                <a href="#minigames" class="hover:text-gold transition text-gray-600 dark:text-gray-300">Events</a>
+                <a href="#manga" class="hover:text-gold transition text-gray-600 dark:text-gray-300">Manga & Anime</a>
+                <a href="#theories" class="hover:text-gold transition text-gray-600 dark:text-gray-300">Theories</a>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <button onclick="toggleTheme()" class="p-2 rounded-full border-2 border-gray-300 dark:border-gray-700 hover:border-gold dark:hover:border-gold transition-all text-gray-800 dark:text-white">
+                    <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <a href="https://www.youtube.com/@TheFlyingPanda" target="_blank" class="hidden lg:flex items-center gap-2 border-2 border-red-600 text-red-600 dark:text-red-500 px-5 py-2 rounded font-black hover:bg-red-600 hover:text-white transition uppercase tracking-widest text-xs">
+                    ▶ FOUNDER: THE FLYING PANDA
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative py-32 px-6 overflow-hidden border-b border-gray-200 dark:border-gray-900 flex flex-col items-center justify-center min-h-[80vh] transition-colors duration-300">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-yellow-500/20 dark:bg-yellow-600/10 rounded-full blur-[120px] -z-10"></div>
+        <div class="max-w-5xl mx-auto text-center z-10 relative">
+            <div class="inline-block border border-gold text-gold px-4 py-1 rounded-full text-sm font-bold tracking-widest uppercase mb-6 bg-yellow-100 dark:bg-yellow-500/10">
+                Officially at 27,000+ Members
+            </div>
+            <h2 class="font-anime text-7xl md:text-9xl mb-4 text-gray-900 dark:text-white leading-none">
+                THE NEW <span class="gradient-text">GOLDEN ERA</span>
+            </h2>
+            <p class="text-lg md:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12 font-medium">
+                The largest, most active ONE PIECE COMMUNITY sanctuary on Discord.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="https://discord.gg/CXWejhAwwj" target="_blank" class="btn-haki bg-gold text-black font-black uppercase tracking-widest px-14 py-6 rounded-md text-xl border border-yellow-300">JOIN THE DISCORD</a>
+            </div>
+            <div class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-gray-300 dark:border-gray-800/80">
+                <div><p class="text-5xl font-anime text-gray-900 dark:text-white">27K+</p><p class="text-sm font-bold tracking-widest text-gold mt-2 uppercase">Crewmates</p></div>
+                <div><p class="text-5xl font-anime text-gray-900 dark:text-white">Lv. 3</p><p class="text-sm font-bold tracking-widest text-gold mt-2 uppercase">Server Boost</p></div>
+                <div><p class="text-5xl font-anime text-gray-900 dark:text-white">500+</p><p class="text-sm font-bold tracking-widest text-gold mt-2 uppercase">Custom Emotes</p></div>
+                <div><p class="text-5xl font-anime text-gray-900 dark:text-white">24/7</p><p class="text-sm font-bold tracking-widest text-gold mt-2 uppercase">Active Chat</p></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-24 space-y-40">
+        <section id="minigames" class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-block border border-red-500 text-red-600 dark:text-red-500 px-3 py-1 rounded text-xs font-bold tracking-widest uppercase bg-red-50 dark:bg-transparent">Server Events</div>
+                <h3 class="font-anime text-6xl text-gray-900 dark:text-white">The Trivia & Minigames</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-xl leading-relaxed">Think your One Piece knowledge is unmatched? The leaderboards say otherwise. From intense "Guess the Quote" speedruns to legendary trivia tournaments, only the most dedicated fans take the crown.</p>
+            </div>
+            <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-2 card-glow shadow-lg dark:shadow-none">
+                <img src="minigames.png" alt="Trivia Minigames" class="rounded-lg w-full object-cover">
+            </div>
+        </section>
+
+        <section id="manga" class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-2 card-glow shadow-lg dark:shadow-none order-2 md:order-1">
+                <img src="manga-discussion.png" alt="Manga Reactions" class="rounded-lg w-full object-cover">
+            </div>
+            <div class="space-y-6 order-1 md:order-2">
+                <div class="inline-block border border-gold text-yellow-600 dark:text-gold px-3 py-1 rounded text-xs font-bold tracking-widest uppercase bg-yellow-50 dark:bg-transparent">Spoiler Zone</div>
+                <h3 class="font-anime text-6xl text-gray-900 dark:text-white">Raw Chapter Chaos</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-xl leading-relaxed">When the raws drop, the server explodes. Join the dedicated manga channels to react in real-time. Whether it's peak fiction or a devastating break week, we weather the storm together.</p>
+            </div>
+        </section>
+
+        <section id="theories" class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-block border border-blue-500 text-blue-600 dark:text-blue-500 px-3 py-1 rounded text-xs font-bold tracking-widest uppercase bg-blue-50 dark:bg-transparent">The Void Century</div>
+                <h3 class="font-anime text-6xl text-gray-900 dark:text-white">Deep Lore Vault</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-xl leading-relaxed">We don't just read the chapters; we dissect them. Dive into the theory channels where members construct massive, multi-arc breakdowns connecting everything from Joyboy's legacy to the true nature of the Red Line.</p>
+            </div>
+            <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-2 card-glow shadow-lg dark:shadow-none">
+                <img src="theory.png" alt="Theory Chat" class="rounded-lg w-full object-cover">
+            </div>
+        </section>
+        
+        <section class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-2 card-glow shadow-lg dark:shadow-none order-2 md:order-1">
+                <img src="anime-discussion.png" alt="Anime Episode Chat" class="rounded-lg w-full object-cover mb-4">
+                <img src="boost.png" alt="Server Boosts" class="rounded-lg w-full object-cover border-t border-gray-200 dark:border-gray-800 pt-4">
+            </div>
+            <div class="space-y-6 order-1 md:order-2">
+                <div class="inline-block border border-purple-500 text-purple-600 dark:text-purple-500 px-3 py-1 rounded text-xs font-bold tracking-widest uppercase bg-purple-50 dark:bg-transparent">Community Power</div>
+                <h3 class="font-anime text-6xl text-gray-900 dark:text-white">Watch Parties & Level 3 Perks</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-xl leading-relaxed">Catch the latest episodes with thousands of others. Thanks to our massive roster of boosters, we run on Level 3 perks—meaning HD streaming, premium audio, and hundreds of custom One Piece emotes tailored to every single situation.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-gray-300 dark:border-gray-900 bg-gray-100 dark:bg-black py-16 text-center transition-colors duration-300">
+        <div class="flex flex-col items-center justify-center mb-6">
+            <img src="OPC-avatar.png" alt="OPC Logo" class="h-16 w-16 rounded-full border border-gray-400 dark:border-gray-700 mb-4 shadow-md">
+            <p class="text-xs font-bold tracking-widest text-gray-500 dark:text-gray-400 uppercase">
+                Founded & Owned By <a href="https://www.youtube.com/@TheFlyingPanda" target="_blank" class="text-red-600 dark:text-red-500 hover:text-gold transition">The Flying Panda</a>
+            </p>
+        </div>
+        <h2 class="font-anime text-5xl text-gray-900 dark:text-white mb-8 tracking-widest">ONE PIECE <span class="text-gold">COMMUNITY</span></h2>
+        <div class="flex justify-center gap-8 mb-10">
+            <a href="https://www.youtube.com/@TheFlyingPanda" target="_blank" class="text-gray-600 dark:text-gray-500 hover:text-red-600 dark:hover:text-red-500 font-black tracking-widest uppercase transition">YouTube</a>
+            <a href="https://discord.gg/CXWejhAwwj" target="_blank" class="text-gray-600 dark:text-gray-500 hover:text-gold font-black tracking-widest uppercase transition">Discord Invite</a>
+            <a href="#" class="text-gray-600 dark:text-gray-500 hover:text-gold font-black tracking-widest uppercase transition">Server Rules</a>
+        </div>
+        <p class="text-gray-500 dark:text-gray-700 text-sm font-bold tracking-widest uppercase">© 2026 ONE PIECE COMMUNITY. 27,000+ Strong.</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const htmlElement = document.documentElement;
+            const themeIcon = document.getElementById('theme-icon');
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />';
+            } else {
+                htmlElement.classList.add('dark');
+                themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />';
+            }
+        }
+    </script>
+</body>
+</html>
