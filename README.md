@@ -1,2 +1,2 @@
-# Opc-Website-
-A website made for the One peace community in discord.
+# One Piece Community Webiste
+A html only built website for a one piece server in discord.
